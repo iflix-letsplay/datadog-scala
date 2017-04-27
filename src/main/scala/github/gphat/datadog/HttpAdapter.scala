@@ -91,7 +91,7 @@ class HttpAdapter(
 
   def doHttp(request: HttpRequest): Future[Response] = {
     (IO(Http) ? request).mapTo[HttpResponse].map({ res =>
-      Response(statusCode = res.status.intValue, res.entity.asString)
+      Response(statusCode = res.status.intValue, res.entity.asString, res.headers.toString)
     })
   }
 
