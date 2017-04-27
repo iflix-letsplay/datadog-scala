@@ -7,5 +7,5 @@ package object datadog {
     tags: Option[Seq[String]] = None, host: Option[String]
   )
 
-  case class Response(statusCode: Int, body: String)
+  case class Response(statusCode: Int, body: String, headers: String)
 }

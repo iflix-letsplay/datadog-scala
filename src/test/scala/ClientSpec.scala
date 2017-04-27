@@ -21,7 +21,7 @@ class ClientSpec extends Specification {
 
     override def doHttp(request: HttpRequest): Future[Response] = {
       Future {
-        Response(500, "Internal Server Error")
+        Response(500, "Internal Server Error", "")
       }
     }
   }
